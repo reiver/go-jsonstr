@@ -23,7 +23,7 @@ type Strings struct {
 	value string
 }
 
-func Compile(a ...string) Strings {
+func CompileStrings(a ...string) Strings {
 	if len(a) <= 0 {
 		return Strings{
 			value:"[]",

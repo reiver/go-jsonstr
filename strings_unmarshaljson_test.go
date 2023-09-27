@@ -30,42 +30,42 @@ func TestString_UnmarshalJSON(t *testing.T) {
 
 
 		{
-			JSON:                   `["apple"]`,
-			Expected: jsonstr.Compile("apple"),
+			JSON:                          `["apple"]`,
+			Expected: jsonstr.CompileStrings("apple"),
 		},
 		{
-			JSON:                   `["apple","banana"]`,
-			Expected: jsonstr.Compile("apple","banana"),
+			JSON:                          `["apple","banana"]`,
+			Expected: jsonstr.CompileStrings("apple","banana"),
 		},
 		{
-			JSON:                   `["apple","banana","cherry"]`,
-			Expected: jsonstr.Compile("apple","banana","cherry"),
-		},
-
-
-
-		{
-			JSON:                   `["😈"]`,
-			Expected: jsonstr.Compile("😈"),
-		},
-		{
-			JSON:                   `["😈","🙂🙁"]`,
-			Expected: jsonstr.Compile("😈","🙂🙁"),
-		},
-		{
-			JSON:                   `["😈","🙂🙁",""]`,
-			Expected: jsonstr.Compile("😈","🙂🙁",""),
-		},
-		{
-			JSON:                   `["😈","🙂🙁","","٠١٢٣۴۵۶٧٨٩"]`,
-			Expected: jsonstr.Compile("😈","🙂🙁","","٠١٢٣۴۵۶٧٨٩"),
+			JSON:                          `["apple","banana","cherry"]`,
+			Expected: jsonstr.CompileStrings("apple","banana","cherry"),
 		},
 
 
 
 		{
-			JSON:                   `["1","two",  "THREE",  "iv", "۵"]`,
-			Expected: jsonstr.Compile("1","two",  "THREE",  "iv", "۵"),
+			JSON:                          `["😈"]`,
+			Expected: jsonstr.CompileStrings("😈"),
+		},
+		{
+			JSON:                          `["😈","🙂🙁"]`,
+			Expected: jsonstr.CompileStrings("😈","🙂🙁"),
+		},
+		{
+			JSON:                          `["😈","🙂🙁",""]`,
+			Expected: jsonstr.CompileStrings("😈","🙂🙁",""),
+		},
+		{
+			JSON:                          `["😈","🙂🙁","","٠١٢٣۴۵۶٧٨٩"]`,
+			Expected: jsonstr.CompileStrings("😈","🙂🙁","","٠١٢٣۴۵۶٧٨٩"),
+		},
+
+
+
+		{
+			JSON:                          `["1","two",  "THREE",  "iv", "۵"]`,
+			Expected: jsonstr.CompileStrings("1","two",  "THREE",  "iv", "۵"),
 		},
 	}
 

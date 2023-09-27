@@ -22,34 +22,34 @@ func TestString_MarshalJSON(t *testing.T) {
 
 
 		{
-			Strings: jsonstr.Compile("apple"),
+			Strings: jsonstr.CompileStrings("apple"),
 			Expected: `["apple"]`,
 		},
 		{
-			Strings: jsonstr.Compile("apple", "banana"),
+			Strings: jsonstr.CompileStrings("apple", "banana"),
 			Expected: `["apple","banana"]`,
 		},
 		{
-			Strings: jsonstr.Compile("apple", "banana", "cherry"),
+			Strings: jsonstr.CompileStrings("apple", "banana", "cherry"),
 			Expected: `["apple","banana","cherry"]`,
 		},
 
 
 
 		{
-			Strings: jsonstr.Compile("😈"),
+			Strings: jsonstr.CompileStrings("😈"),
 			Expected: `["😈"]`,
 		},
 		{
-			Strings: jsonstr.Compile("😈", "🙂🙁"),
+			Strings: jsonstr.CompileStrings("😈", "🙂🙁"),
 			Expected: `["😈","🙂🙁"]`,
 		},
 		{
-			Strings: jsonstr.Compile("😈", "🙂🙁", ""),
+			Strings: jsonstr.CompileStrings("😈", "🙂🙁", ""),
 			Expected: `["😈","🙂🙁",""]`,
 		},
 		{
-			Strings: jsonstr.Compile("😈", "🙂🙁", "", "٠١٢٣۴۵۶٧٨٩"),
+			Strings: jsonstr.CompileStrings("😈", "🙂🙁", "", "٠١٢٣۴۵۶٧٨٩"),
 			Expected: `["😈","🙂🙁","","٠١٢٣۴۵۶٧٨٩"]`,
 		},
 	}
