@@ -19,7 +19,7 @@ import "sourcecode.social/reiver/go-jsonstr"
 
 To install package **jsonstr** do the following:
 ```
-GOPROXY=direct https://sourcecode.social/reiver/go-jsonstr
+GOPROXY=direct go get https://sourcecode.social/reiver/go-jsonstr
 ```
 
 ## Author
