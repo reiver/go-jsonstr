@@ -5,7 +5,7 @@ import (
 
 	"encoding/json"
 
-	"sourcecode.social/reiver/go-jsonstr"
+	"github.com/reiver/go-jsonstr"
 )
 
 func TestString_UnmarshalJSON(t *testing.T) {

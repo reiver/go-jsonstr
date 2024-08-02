@@ -1,4 +1,4 @@
-module sourcecode.social/reiver/go-jsonstr
+module github.com/reiver/go-jsonstr
 
 go 1.20
 
